@@ -318,7 +318,9 @@ public class Main extends javax.swing.JFrame {
          bola5.iniciar(320,3);
           requestFocusInWindow();  
     }//GEN-LAST:event_correr3ActionPerformed
-
+    /*
+        metodo que lee la tecla presionada y envia dos enteros, uno para saber la ubicacion y el otro para saber que bola mover
+    */
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
         int x=personaje.getX();
         int y=personaje.getY();
@@ -359,6 +361,9 @@ public class Main extends javax.swing.JFrame {
     public void keyReleased(KeyEvent evt){
         
     }
+    /*
+    metodo para saber el momento en que se deja de presionar un tecla
+    */
     private void panelKeyReleased(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_panelKeyReleased
         System.out.println("Aqui");
          int x=personaje.getX();
@@ -369,7 +374,9 @@ public class Main extends javax.swing.JFrame {
              personaje.setLocation(x, y);
         }
     }//GEN-LAST:event_panelKeyReleased
-
+/*
+    metodo saber si se clickea o no el mouse
+    */
     private void panelMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_panelMouseClicked
        
         System.out.println("Hola mundo");

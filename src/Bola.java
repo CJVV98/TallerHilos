@@ -4,14 +4,17 @@ import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.util.logging.Level;
 import java.util.logging.Logger;
-
-
+/*
+clase de tipo Jpanel que llamas los hilos
+*/
 public class Bola extends javax.swing.JPanel implements Runnable {
    Thread hilo,hilo1,hilo2,hilo3,hilo4,hilo5;
     int x;
 
  
-   
+   /*
+    constructor de la clase Bola
+    */
     public Bola() {
         initComponents();
      
@@ -22,7 +25,9 @@ public class Bola extends javax.swing.JPanel implements Runnable {
         
     }
 
-    
+    /*
+    metodo que pinta la bola en el jpanel
+    */
     public void paint(Graphics sd){
         sd.setColor(Color.getHSBColor(0, 64, 67));
         sd.fillRect(0, 0, getWidth(), getHeight());
@@ -30,6 +35,9 @@ public class Bola extends javax.swing.JPanel implements Runnable {
         sd.fillOval(x, 0, 20, 20);
         
     }
+    /*
+    metodo para iniciar los hilos de acuerdo a la tecla presionada enviada a traves de una variable entera
+    */
      public void iniciar(int r,int d){
          this.x=r;
          switch(d){
@@ -111,6 +119,9 @@ public class Bola extends javax.swing.JPanel implements Runnable {
              }
          }
        }  
+/*
+     metodo para indicar la posicion de acuerdo a donde termina la bola
+     */
 public void reset(int bandera){
     switch(bandera){
         case 4:this.x=0;break;
@@ -150,9 +161,11 @@ public void reset(int bandera){
     private void formKeyPressed(java.awt.event.KeyEvent evt) {//GEN-FIRST:event_formKeyPressed
 
     }//GEN-LAST:event_formKeyPressed
-
+/*
+    metodo que ejecuta el hilo, es decir mueve la bola 
+    */
     @Override
-    public void run() {
+     public void run() {
        try {
         
           if(x==0){
